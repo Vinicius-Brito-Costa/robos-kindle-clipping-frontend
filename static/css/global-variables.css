@@ -1,0 +1,8 @@
+:root {
+    --header-height: 80px;
+    --footer-height: 80px;
+    --round-corner: .35rem;
+    --ball-corner: 50%;
+    --application-grid-template: 1fr 5fr 1fr;
+    --application-max-body-height: calc(100% - (var(--header-height) + var(--footer-height)));
+}
