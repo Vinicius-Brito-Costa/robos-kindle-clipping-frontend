@@ -24,8 +24,8 @@
         margin: 0 auto auto;
         font-family: var(--font-roboto-mono);
         font-size: clamp(8px, 100%, 15px);
-        height: 120px;
-        width: 120px;
+        height: 160px;
+        width: 160px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -38,8 +38,8 @@
         color: black;
     }
     .container-limiter{
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -66,7 +66,7 @@
     .export-image-container:hover{
         height: 90%;
         width: 90%;
-        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.452);
+        box-shadow: 0px 0px 4px rgba(144, 238, 144, 0.562);
         border: 1px solid rgb(211, 211, 211);
     }
     .container-limiter:hover ~ .command{

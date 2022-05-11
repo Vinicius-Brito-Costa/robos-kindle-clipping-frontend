@@ -1,11 +1,9 @@
 <script context="module" lang="ts">
     import BodyContainer from "$lib/components/body/BodyContainer.svelte";
-    import DropZone from "$lib/components/body/DropZone.svelte";
-    import Export from "$lib/components/body/Export.svelte";
-    import SelectExport from "$lib/components/body/SelectExport.svelte";
+    import SelectExport from "$lib/components/body/home/SelectExport.svelte";
     import Footer from "$lib/components/footer/Footer.svelte";
     import NavigationBar from "$lib/components/head/NavigationBar.svelte";
-    import ExportClass from "$lib/components/body/ExportClass";
+    import ExportClass from "$lib/components/body/home/ExportClass";
 	export const prerender = true;
 </script>
 
@@ -31,5 +29,6 @@
     section{
         height: 100%;
         overflow: hidden;
+        background-color: var(--color-bg-snow);
     }
 </style>

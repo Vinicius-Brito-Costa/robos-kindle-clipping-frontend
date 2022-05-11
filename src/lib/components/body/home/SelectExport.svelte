@@ -23,9 +23,9 @@
         grid-template-columns: var(--application-grid-template);
         grid-template-rows: 3fr 1fr 3fr 1fr;
         background: rgb(187,187,187);
-        border-top: solid 1px rgb(175, 175, 175);
-        border-bottom: solid 1px rgb(175, 175, 175);
-        background: linear-gradient(180deg, rgb(204, 204, 204) 0%, rgba(214,214,214,1) 5%);
+        border-top: solid 1px rgb(231, 231, 231);
+        border-bottom: solid 1px rgb(231, 231, 231);
+        background: linear-gradient(180deg, var(--color-bg-white) 0%, var(--color-bg-snow) 5%);
     }
     h2{
         margin: auto;

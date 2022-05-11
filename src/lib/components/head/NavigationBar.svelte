@@ -4,12 +4,13 @@
 
 <div class="main-container">
     <a href="/" alt="home" class="corner">
-        <img src="http://pa1.narvii.com/6621/8f8a92ca3286b24408f1c87fc111a22bacefac94_00.gif" alt="Site's Logo" />
+        <img src="img/RoboVictory.webp" alt="Site's Logo" />
     </a>
     <header>
         <nav>
             <a href="/" alt="Home" class="nav-item {page == "home" ? "selected" : ""}">Home</a>
-            <a href="/about" alt="About" class="nav-item {page == "about" ? "selected" : ""}">About</a>
+            <a href="/terms-of-use" alt="Terms" class="nav-item {page == "terms" ? "selected" : ""}">Terms of use</a>
+            <a href="/privacy-policy" alt="Policy" class="nav-item {page == "policy" ? "selected" : ""}">Privacy policy</a>
         </nav>
     </header>
 
@@ -43,18 +44,26 @@
     nav{
         display: flex;
         height: 100%;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
     }
     .nav-item{
         color: rgb(133, 133, 133);
         font-size: 20px;
+        width: 120px;
+        text-align: center;
         text-decoration: none;
         padding: 1px 6px;
         border-radius: var(--round-corner);
     }
+    .nav-item:hover{
+        color: darkseagreen;
+    }
     .selected{
-        background-color: rgb(219, 193, 47);
+        background-color: darkseagreen;
+        color: white;
+    }
+    .selected:hover{
         color: white;
     }
 </style>

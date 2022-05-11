@@ -7,4 +7,6 @@
     --application-max-body-height: calc(100% - (var(--header-height) + var(--footer-height)));
     --font-roboto-flex: 'Roboto Flex';
     --font-roboto-mono: 'Roboto Mono';
+    --color-bg-snow: rgb(252, 252, 252);
+    --color-bg-white: rgb(238, 238, 238);
 }
