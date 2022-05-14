@@ -1,10 +1,11 @@
 <script>
+    import logo from "$lib/assets/img/RoboVictory.webp";
     export let page = "";
 </script>
 
 <div class="main-container">
     <a href="/" alt="home" class="corner">
-        <img src="img/RoboVictory.webp" alt="Site's Logo" />
+        <img src={logo} alt="Site's Logo" />
     </a>
     <header>
         <nav>
