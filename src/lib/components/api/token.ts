@@ -10,7 +10,7 @@ export default async function getToken(fetch) : Promise<string> {
             new TokenRequest(process.env.ROBO_CLIPPING_USER as string, 
                 process.env.ROBO_CLIPPING_PASSWORD as string))
     }
-    return fetch(getTokenUrl, options)
+    return await fetch(getTokenUrl, options)
     .then(res => {
         if(res.ok){
             return res.json();

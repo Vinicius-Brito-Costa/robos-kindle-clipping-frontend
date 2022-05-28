@@ -10,7 +10,7 @@ const integrationURLMap: Record<string, string> = {
 //@ts-ignore
 export async function get({ params }){
     console.log(params)
-    return getToken(fetch).then(token => {
+    return await getToken(fetch).then(token => {
         console.log(integrationURLMap[params.id])
         return fetch(integrationURLMap[params.id], {headers: { "Authorization": token }})
         .then(res => res.json())
