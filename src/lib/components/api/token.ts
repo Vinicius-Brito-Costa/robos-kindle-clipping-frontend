@@ -1,4 +1,4 @@
-import { constants } from "src/conts";
+import { constants } from "$lib/components/api/consts";
 
 const getTokenUrl = constants.VITE_APPLICATION_BASE_PATH + constants.VITE_GET_APPLICATION_TOKEN_PATH;
 

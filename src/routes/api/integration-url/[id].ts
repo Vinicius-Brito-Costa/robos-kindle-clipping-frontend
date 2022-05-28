@@ -1,5 +1,5 @@
 import getToken from "$lib/components/api/token";
-import { constants } from "src/conts";
+import { constants } from "$lib/components/api/consts";
 
 const integrationUrl: string = constants.VITE_APPLICATION_BASE_PATH + constants.VITE_INTEGRATION_AUTH_PATH;
 
