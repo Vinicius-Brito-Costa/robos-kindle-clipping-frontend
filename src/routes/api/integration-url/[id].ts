@@ -7,7 +7,7 @@ const integrationURLMap: Record<string, string> = {
 }
 
 //@ts-ignore
-export async function get({ params }){
+export async function get({ fetch, params }){
     console.log(params)
     return getToken(fetch).then(token => {
         console.log(integrationURLMap[params.id])
