@@ -1,6 +1,6 @@
 import getToken from "$lib/components/api/token"
 
-const integrationUrl: string = import.meta.env.VITE_APPLICATION_BASE_PATH + import.meta.env.VITE_INTEGRATION_PATH;
+const integrationUrl: string = process.env["VITE_APPLICATION_BASE_PATH"] + process.env["VITE_INTEGRATION_PATH"];
 
 const integrationURLMap: Record<string, string> = {
     notion: integrationUrl + "notion"

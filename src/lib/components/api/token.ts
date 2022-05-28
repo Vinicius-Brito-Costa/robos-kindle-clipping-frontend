@@ -1,4 +1,4 @@
-const getTokenUrl = import.meta.env.VITE_APPLICATION_BASE_PATH + import.meta.env.VITE_GET_APPLICATION_TOKEN_PATH;
+const getTokenUrl = process.env["VITE_APPLICATION_BASE_PATH"] + process.env["VITE_GET_APPLICATION_TOKEN_PATH"];
 
 export default async function getToken(fetch) : Promise<string> {
     let options = {

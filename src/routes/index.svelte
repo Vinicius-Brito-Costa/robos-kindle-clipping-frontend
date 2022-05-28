@@ -7,7 +7,7 @@
     import JSON from "$lib/assets/img/json.png";
     import DOCX from "$lib/assets/img/docx.png";
 	export const prerender = true;
-    console.log(import.meta.env.VITE_APPLICATION_BASE_PATH)
+    console.log(process.env["VITE_APPLICATION_BASE_PATH"])
 </script>
 
 <svelte:head>
