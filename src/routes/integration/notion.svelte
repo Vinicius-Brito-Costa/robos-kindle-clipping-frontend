@@ -9,7 +9,7 @@
 	import BodyContainer from '$lib/components/body/BodyContainer.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import NavigationBar from '$lib/components/head/NavigationBar.svelte';
-	export const prerender = true;
+	export const prerender = false;
 </script>
 
 <script lang="ts">
