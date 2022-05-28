@@ -21,7 +21,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: var(--application-grid-template);
-        grid-template-rows: 3fr 1fr 3fr 1fr;
+        grid-template-rows: 2fr 1fr 3fr 1fr;
         background: rgb(187,187,187);
         border-top: solid 1px rgb(231, 231, 231);
         border-bottom: solid 1px rgb(231, 231, 231);
@@ -31,6 +31,7 @@
         margin: auto;
         grid-column-start: 2;
         grid-row-start: 2;
+        color: var(--color-focus);
     }
     .export-container{
         grid-column-start: 2;

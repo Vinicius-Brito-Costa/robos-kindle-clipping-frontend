@@ -35,7 +35,8 @@
         transition: all .2s ease-in;
     }
     .command{
-        color: black;
+        color: var(--color-focus);
+        font-weight: bolder;
     }
     .container-limiter{
         width: 130px;
@@ -66,8 +67,8 @@
     .export-image-container:hover{
         height: 90%;
         width: 90%;
-        box-shadow: 0px 0px 4px rgba(144, 238, 144, 0.562);
-        border: 1px solid rgb(211, 211, 211);
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.144);
+        border: 1px solid var(--color-accent);
     }
     .container-limiter:hover ~ .command{
         opacity: 0;

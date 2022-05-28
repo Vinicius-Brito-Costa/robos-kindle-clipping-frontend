@@ -155,9 +155,6 @@
     }
     ::-webkit-scrollbar-thumb {
         border-radius: var(--round-corner);
-        background: rgb(197, 197, 197);
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgb(160, 160, 160);
+        background: var(--color-accent);
     }
 </style>

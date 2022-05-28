@@ -1,5 +1,5 @@
 <script>
-    import logo from "$lib/assets/img/RoboVictory.webp";
+    import logo from "$lib/assets/img/logo.png";
     export let page = "";
 </script>
 
@@ -37,7 +37,7 @@
         justify-content: center;
     }
     .corner img{
-        height: 100%;
+        height: 80%;
     }
     header{
         width: 100%;
@@ -58,10 +58,10 @@
         border-radius: var(--round-corner);
     }
     .nav-item:hover{
-        color: darkseagreen;
+        color: var(--color-accent);
     }
     .selected{
-        background-color: darkseagreen;
+        background-color: var(--color-accent);
         color: white;
     }
     .selected:hover{
