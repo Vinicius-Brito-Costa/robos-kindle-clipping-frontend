@@ -12,7 +12,7 @@ export async function post({ request }){
     const requestBody: IntegrationRequest = await request.request.json()
     console.log(requestBody)
     
-    return getToken(fetch).then(token => {
+    return await getToken(fetch).then(token => {
         let actualUrl: string = integrationURLMap[requestBody.integration.toLowerCase()]
         let options = {
             method: "POST",
