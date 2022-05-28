@@ -18,9 +18,9 @@
 	<NavigationBar page="home" />
     <BodyContainer>
         <SelectExport exports={[
-            new ExportClass("https://cdn.worldvectorlogo.com/logos/notion-2.svg", "Notion"),
-            new ExportClass(JSON, "JSON"),
-            new ExportClass(DOCX, "DOCX")
+            new ExportClass("https://cdn.worldvectorlogo.com/logos/notion-2.svg", "Notion", true),
+            new ExportClass(JSON, "JSON", false),
+            new ExportClass(DOCX, "DOCX", false)
             ]} />
         <!-- <DropZone /> -->
     </BodyContainer>

@@ -4,13 +4,21 @@
     export let exports: ExportInterface[];
     let grid = "";
     exports.forEach(() => grid += "1fr ");
+
+    function exportTo(exp: string){
+        console.log(exp)
+    }
+
+    async function integrateTo(integration: string){
+        window.location.href = await fetch("/api/integration-url/" + integration.toLowerCase()).then(res => res.text()).then(res => res);
+    }
 </script>
 
 <section>
     <h2>Pick which option suits you:</h2>
     <div class="export-container" style={"grid-template-columns: " + grid}>
         {#each exports as option}
-            <Export options={option} callback={() => console.log(option.command)}/>
+            <Export options={option} callback={() => option.isIntegration ? integrateTo(option.command) : exportTo(option.command)}/>
         {/each}
     </div>
 </section>

@@ -4,8 +4,6 @@
     export let callback: () => void;
 
     function callbackHandler(){
-        // DO STUFF
-
         callback()
     }
 </script>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let option = 'NONE';
+    export let token = "";
 
 	export async function drop(event: DragEvent) {
 		event.preventDefault();
@@ -16,13 +17,15 @@
                     console.log("Agora pode seguir")
                     console.log(file)
                     let request = {
+                        integration: option,
+                        clientToken: token,
                         clippings: await file.text()
                     }
                     let options = {
                         method: "POST",
                         body: JSON.stringify(request)
                     }
-                    await fetch("https://webhook.site/46d396ce-5cfc-44b1-8afe-199ac8f17fe4", options).then(res => console.log(res));
+                    await fetch("/api/integration", options).then(res => console.log(res));
                 }
             }
         }
