@@ -1,5 +1,4 @@
 import getToken from "$lib/components/api/token"
-import fetch from "node-fetch"
 
 const integrationUrl: string = import.meta.env.VITE_APPLICATION_BASE_PATH + import.meta.env.VITE_INTEGRATION_PATH;
 
@@ -8,11 +7,11 @@ const integrationURLMap: Record<string, string> = {
 }
 
 //@ts-ignore
-export async function post(request){
+export async function post({ request }){
     const requestBody: IntegrationRequest = await request.request.json()
     console.log(requestBody)
     
-    return getToken().then(token => {
+    return getToken(fetch).then(token => {
         let actualUrl: string = integrationURLMap[requestBody.integration.toLowerCase()]
         let options = {
             method: "POST",

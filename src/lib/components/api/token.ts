@@ -1,8 +1,6 @@
-import fetch from "node-fetch"
-
 const getTokenUrl = import.meta.env.VITE_APPLICATION_BASE_PATH + import.meta.env.VITE_GET_APPLICATION_TOKEN_PATH;
 
-export default async function getToken() : Promise<string> {
+export default async function getToken(fetch) : Promise<string> {
     let options = {
         method: "POST",
         headers: {
