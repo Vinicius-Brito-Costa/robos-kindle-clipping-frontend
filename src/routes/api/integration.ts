@@ -9,7 +9,7 @@ const integrationURLMap: Record<string, string> = {
 
 //@ts-ignore
 export async function post({ request }){
-    const requestBody: IntegrationRequest = await request.request.json()
+    const requestBody: IntegrationRequest = await request.json()
     console.log(requestBody)
     
     return await getToken(fetch).then(token => {
