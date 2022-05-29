@@ -1,5 +1,6 @@
 <script lang="ts">
 import download from "$lib/components/api/download";
+import downloadMap from "$lib/components/api/downloadMap";
 
 
 	export let option: string = 'NONE';
@@ -47,7 +48,8 @@ import download from "$lib/components/api/download";
                             alert("Successfully exported your clippings to " + option)
                         }
                         else{
-                            download(new Blob([JSON.stringify(res.result, null, 2)], { type: 'application/json' }), option.toLowerCase())
+                            let lowerCaseOption = option.toLowerCase()
+                            download(new Blob([downloadMap(res.result, lowerCaseOption)], { type: 'application/json' }), lowerCaseOption)
                         }
                     })
                 }
