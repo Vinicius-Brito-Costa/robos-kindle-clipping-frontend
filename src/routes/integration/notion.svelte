@@ -28,7 +28,7 @@
 <section>
 	<NavigationBar page="home" />
 	<BodyContainer>
-		<DropZone option="Notion" token={clientToken}/>
+		<DropZone option="Notion" token={clientToken} isIntegration={true}/>
 	</BodyContainer>
 	<Footer />
 </section>
