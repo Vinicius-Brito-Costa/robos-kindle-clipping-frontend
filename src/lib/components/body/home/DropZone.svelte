@@ -1,6 +1,10 @@
 <script lang="ts">
-	export let option = 'NONE';
-    export let token = "";
+import download from "$lib/components/api/download";
+
+
+	export let option: string = 'NONE';
+    export let token: string = "";
+    export let isIntegration: boolean;
 
 	export async function drop(event: DragEvent) {
 		event.preventDefault();
@@ -16,16 +20,36 @@
                 if(fileExtension.toLowerCase() == "txt" && file.type.toLowerCase() == "text/plain"){
                     console.log("Agora pode seguir")
                     console.log(file)
-                    let request = {
-                        integration: option,
-                        clientToken: token,
-                        clippings: await file.text()
+                    let url = isIntegration ? "/api/integration" : "/api/download"
+                    let fileData = await file.text()
+                    let request = {}
+                    if(isIntegration){
+                        request = {
+                            integration: option,
+                            clientToken: token,
+                            clippings: fileData
+                        }
+                    }
+                    else{
+                        request = {
+                            type: option,
+                            clippings: fileData
+                        }
                     }
                     let options = {
                         method: "POST",
                         body: JSON.stringify(request)
                     }
-                    await fetch("/api/integration", options).then(res => console.log(res));
+                    await fetch(url, options)
+                    .then(res => res.json())
+                    .then(res => {
+                        if(isIntegration){
+                            alert("Successfully exported your clippings to " + option)
+                        }
+                        else{
+                            download(new Blob([JSON.stringify(res.result, null, 2)], { type: 'application/json' }), option.toLowerCase())
+                        }
+                    })
                 }
             }
         }
@@ -37,7 +61,6 @@
             ev.dataTransfer.dropEffect = 'move';
         }
 	}
-
 </script>
 
 <section on:drop={(event) => drop(event)}

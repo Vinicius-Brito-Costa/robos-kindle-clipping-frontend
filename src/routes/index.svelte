@@ -6,8 +6,13 @@
     import ExportClass from "$lib/components/body/home/ExportClass";
     import JSON from "$lib/assets/img/json.png";
     import DOCX from "$lib/assets/img/docx.png";
+    import DropZone from "$lib/components/body/home/DropZone.svelte";
 	export const prerender = true;
-    console.log(import.meta.env.VITE_APPLICATION_BASE_PATH)
+</script>
+<script>
+    $: showDropZone = false;
+    $: option = "NONE";
+    $: isIntegration = false;
 </script>
 
 <svelte:head>
@@ -18,11 +23,15 @@
 <section>
 	<NavigationBar page="home" />
     <BodyContainer>
-        <SelectExport exports={[
-            new ExportClass("https://cdn.worldvectorlogo.com/logos/notion-2.svg", "Notion", true),
-            new ExportClass(JSON, "JSON", false),
-            new ExportClass(DOCX, "DOCX", false)
-            ]} />
+        {#if showDropZone}
+            <DropZone bind:option bind:isIntegration />
+        {:else}
+            <SelectExport exports={[
+                new ExportClass("https://cdn.worldvectorlogo.com/logos/notion-2.svg", "Notion", true),
+                new ExportClass(JSON, "JSON", false),
+                new ExportClass(DOCX, "DOCX", false)
+                ]} bind:showDropZone bind:option bind:isIntegration/>
+        {/if}
         <!-- <DropZone /> -->
     </BodyContainer>
     <Footer />
